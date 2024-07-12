@@ -10,6 +10,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.http.Headers;
 import io.restassured.http.Method;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
@@ -22,8 +23,11 @@ public class postCallTest {
 	ResponseBody body;
 	int statusCode;
 	
+	JsonPath jsonPathEvaluator;
+	
 	Utilities uPage = new Utilities();
 	String email = uPage.generateRandomString(5) + "@gmail.com";
+	String userDetails;
 	
 	@Test
 	public void verify_post_call() 
@@ -47,9 +51,24 @@ public class postCallTest {
 		  statusCode = response.getStatusCode();
 		  Assert.assertEquals(statusCode /*actual value*/, 201 /*expected value*/, 
 		            "Correct status code should return"); 
+		  // userDetails = response.getBody().asPrettyString();
 		  
 		  System.out.println("Response Status Code: " + response.getStatusCode());
 	      System.out.println("Response Body: " + response.getBody().asPrettyString());	  
+	      
+		  jsonPathEvaluator = response.jsonPath();
+		  
+		  // Then simply query the JsonPath object to get a String value of the node
+		  int userId = jsonPathEvaluator.get("id");
+		  System.out.println("Name received from Response = " + userId);
+		  
+		  
+		  // Verify created user via GET Method
+		  response = httprequest.request(Method.GET, "/" + userId);
+		  body = response.getBody();
+		  int user_id = jsonPathEvaluator.get("id");
+		  Assert.assertEquals(userId, user_id, "Correct user id received in the Response");
+
 	  
  	}
 }
