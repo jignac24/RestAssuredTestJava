@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="apiTestsValidation.postCallTest">
+      <class name="com.opencart.test.PracticeTest">
         <methods>
-          <include name="verify_post_call"/>
+          <include name="verify_dropDown"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- apiTestsValidation.postCallTest -->
+      </class> <!-- com.opencart.test.PracticeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
