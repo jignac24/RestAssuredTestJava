@@ -2,7 +2,7 @@ package testcases;
 
 import org.testng.annotations.Test;
 
-import com.opencart.page.OpenCartPage;
+import UIPages.OpenCartPage;
 
 import org.testng.annotations.BeforeTest;
 

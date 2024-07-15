@@ -2,20 +2,24 @@ package testcases;
 
 import org.testng.annotations.Test;
 
-import com.opencart.page.PracticePage;
+import UIPages.PracticePage;
+import UIPages.UtilityPage;
 
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import static org.testng.Assert.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -23,15 +27,28 @@ import org.testng.annotations.AfterTest;
 public class PracticeTest {
 
 	PracticePage page = new PracticePage();
-	WebDriver driver = page.getDriver();
-
+	// WebDriver driver = page.getDriver();
+	static WebDriver driver;
+	
 	@BeforeTest
-	public void beforeTest() {
+	@Parameters("browser")
+	public void beforeTest(String browserName) throws Exception{
+		
+		if (browserName.equalsIgnoreCase("firefox")) {
+            driver = page.getFirefoxDriver();
+        }
+        else if (browserName.equalsIgnoreCase("chrome")) {
+        	driver = page.getChromeDriver();
+        }
+        else {
+            throw new Exception("Browser is not correct");
+        }
 		page.openUrl();
+        driver.manage().window().maximize();
 	}
 
 	@Test
-	public void verifyTitle() {
+	public void verify_Title() {
 
 		Assert.assertEquals(driver.getTitle(), "Practice Page");
 
@@ -121,7 +138,7 @@ public class PracticeTest {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void verify_popUp() {
 		driver.findElement(By.id("name")).sendKeys("testing");
 		driver.findElement(By.id("alertbtn")).click();
@@ -135,9 +152,45 @@ public class PracticeTest {
 		alert.accept();
 
 	}
+	
+	@Test(enabled = false)
+	public void verify_textbox() throws InterruptedException
+	{		
+
+		driver.findElement(By.id("hide-textbox")).click();
+		
+		WebElement textbox = driver.findElement(By.id("displayed-text"));	// Find Textbox	
+		
+		UtilityPage page = new UtilityPage(driver);
+		page.scrolldown(textbox);  // Scroll down page
+		
+		Assert.assertEquals(textbox.isDisplayed(), false); // Textbox should disable
+		
+		driver.findElement(By.id("show-textbox")).click();		
+		Assert.assertEquals(textbox.isDisplayed(), true); // Textbox should enabled
+		
+		textbox.sendKeys("showing now");
+
+	}
+	
+	@Test
+	public void verify_moveElement() throws InterruptedException{
+		
+		Actions action = new Actions(driver);		
+		WebElement box = driver.findElement(By.id("mousehover"));
+		
+		action.scrollToElement(box).build();
+		action.moveToElement(box).perform();
+		driver.findElement(By.cssSelector("a[href='#top']")).click();
+		
+		action.scrollToElement(box).perform();
+		action.moveToElement(box).perform();
+		driver.findElement(By.xpath("//a[normalize-space()='Reload']")).click();
+	}
 
 	@AfterTest
-	public void afterTest() {
+	public void afterTest()
+	{
 		page.tearDown();
 	}
 

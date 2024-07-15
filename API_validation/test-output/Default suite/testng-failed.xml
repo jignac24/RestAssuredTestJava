@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.opencart.test.PracticeTest">
+      <class name="testcases.PracticeTest">
         <methods>
-          <include name="verify_popUp"/>
-          <include name="afterTest"/>
+          <include name="verify_moveElement"/>
           <include name="beforeTest"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- com.opencart.test.PracticeTest -->
+      </class> <!-- testcases.PracticeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

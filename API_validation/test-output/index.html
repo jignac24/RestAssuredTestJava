@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-AutomationTestscripts" class="navigator-link">
-              <span class="suite-name border-passed">AutomationTestscripts</span>
+              <span class="suite-name border-failed">AutomationTestscripts</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-AutomationTestscripts" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-AutomationTestscripts" class="hide-methods failed suite-AutomationTestscripts"> (hide)</a> <!-- hide-methods failed suite-AutomationTestscripts -->
+                      <a href="#" panel-name="suite-AutomationTestscripts" class="show-methods failed suite-AutomationTestscripts"> (show)</a> <!-- show-methods failed suite-AutomationTestscripts -->
+                    </span>
+                    <div class="method-list-content failed suite-AutomationTestscripts">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationTestscripts" title="testcases.PracticeTest" class="method navigator-link" hash-for-method="verify_moveElement">verify_moveElement</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-AutomationTestscripts -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +117,7 @@
                     <div class="method-list-content passed suite-AutomationTestscripts">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AutomationTestscripts" title="testcases.PracticeTest" class="method navigator-link" hash-for-method="verifyTitle">verifyTitle</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-AutomationTestscripts" title="testcases.PracticeTest" class="method navigator-link" hash-for-method="verify_checkBox">verify_checkBox</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -113,7 +127,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AutomationTestscripts" title="testcases.PracticeTest" class="method navigator-link" hash-for-method="verify_popUp">verify_popUp</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-AutomationTestscripts" title="testcases.PracticeTest" class="method navigator-link" hash-for-method="verify_moveElement">verify_moveElement</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-AutomationTestscripts -->
@@ -128,6 +142,46 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-AutomationTestscripts" class="panel AutomationTestscripts">
+          <div class="suite-AutomationTestscripts-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.PracticeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_moveElement">
+                  </a> <!-- verify_moveElement -->
+                  <span class="method-name">verify_moveElement</span>
+                  <div class="stack-trace">org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: Move target (80, 1038) is out of bounds of viewport dimensions (1536, 731)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [225db665-9ba0-4865-bf51-fa363045f59f, actions {actions=[org.openqa.selenium.interactions.Sequence@39703e9c]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.0, moz:accessibilityChecks: false, moz:buildID: 20240704121409, moz:debuggerAddress: 127.0.0.1:32412, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 16572, moz:profile: C:\Users\ADMIN\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:32412/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 225db665-9ba0-4865-bf51-fa363045f59f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:604)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:603)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:568)
+	at testcases.PracticeTest.verify_moveElement(PracticeTest.java:183)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AutomationTestscripts-class-failed -->
           <div class="suite-AutomationTestscripts-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -136,9 +190,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyTitle">
-                  </a> <!-- verifyTitle -->
-                  <span class="method-name">verifyTitle</span>
+                  <a name="verify_checkBox">
+                  </a> <!-- verify_checkBox -->
+                  <span class="method-name">verify_checkBox</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -150,9 +204,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verify_popUp">
-                  </a> <!-- verify_popUp -->
-                  <span class="method-name">verify_popUp</span>
+                  <a name="verify_moveElement">
+                  </a> <!-- verify_moveElement -->
+                  <span class="method-name">verify_moveElement</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -166,12 +220,31 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;AutomationTestscripts&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;PracticeTests&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;AutomationTestscripts&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;ChromeTest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.PracticeTest&quot;/&gt;
+      &lt;class name=&quot;testcases.PracticeTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;verifyTitle&quot;/&gt;
+          &lt;include name=&quot;verify_checkBox&quot;/&gt;
+          &lt;include name=&quot;verify_moveElement&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.PracticeTest --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- PracticeTests --&gt;
+  &lt;/test&gt; &lt;!-- ChromeTest --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;FirefoxTest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.PracticeTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;verifyTitle&quot;/&gt;
+          &lt;include name=&quot;verify_checkBox&quot;/&gt;
+          &lt;include name=&quot;verify_moveElement&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testcases.PracticeTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FirefoxTest --&gt;
 &lt;/suite&gt; &lt;!-- AutomationTestscripts --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,7 +256,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">PracticeTests (1 class)</span>
+                <span class="test-name">ChromeTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FirefoxTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -209,24 +285,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verify_checkBox')
+data.setCell(0, 1, 'verify_moveElement')
 data.setCell(0, 2, 'testcases.PracticeTest')
-data.setCell(0, 3, 362);
+data.setCell(0, 3, 1473);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verify_popUp')
+data.setCell(1, 1, 'verify_checkBox')
 data.setCell(1, 2, 'testcases.PracticeTest')
-data.setCell(1, 3, 356);
+data.setCell(1, 3, 703);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyTitle')
+data.setCell(2, 1, 'verify_checkBox')
 data.setCell(2, 2, 'testcases.PracticeTest')
-data.setCell(2, 3, 161);
+data.setCell(2, 3, 257);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verify_moveElement')
+data.setCell(3, 2, 'testcases.PracticeTest')
+data.setCell(3, 3, 32);
 window.suiteTableData['AutomationTestscripts']= { tableData: data, tableDiv: 'times-div-AutomationTestscripts'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 879 ms</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-AutomationTestscripts">
               </div> <!-- times-div-AutomationTestscripts -->
             </div> <!-- times-div -->
@@ -241,19 +321,39 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-AutomationTestscripts" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">testcases.PracticeTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verify_dropDown</span>
+                <span class="ignored-method-name">verify_Title</span>
+                <br/>
+                <span class="ignored-method-name">verify_popUp</span>
+                <br/>
+                <span class="ignored-method-name">verify_Title</span>
                 <br/>
                 <span class="ignored-method-name">verify_openWindow</span>
                 <br/>
-                <span class="ignored-method-name">verify_openTab</span>
+                <span class="ignored-method-name">verifyRadioBtn</span>
+                <br/>
+                <span class="ignored-method-name">verify_dropDown</span>
                 <br/>
                 <span class="ignored-method-name">verifyRadioBtn</span>
+                <br/>
+                <span class="ignored-method-name">verify_openTab</span>
+                <br/>
+                <span class="ignored-method-name">verify_dropDown</span>
+                <br/>
+                <span class="ignored-method-name">verify_textbox</span>
+                <br/>
+                <span class="ignored-method-name">verify_textbox</span>
+                <br/>
+                <span class="ignored-method-name">verify_openWindow</span>
+                <br/>
+                <span class="ignored-method-name">verify_popUp</span>
+                <br/>
+                <span class="ignored-method-name">verify_openTab</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -267,24 +367,38 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.PracticeTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
+                <span class="method-name">beforeTest(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest(firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">verifyTitle</span>
-                <span class="method-start">3626 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <span class="method-name">verify_checkBox</span>
-                <span class="method-start">3791 ms</span>
+                <span class="method-start">4842 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verify_popUp</span>
-                <span class="method-start">4155 ms</span>
+                <span class="method-name">verify_moveElement</span>
+                <span class="method-start">5104 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">4511 ms</span>
+                <span class="method-start">6585 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="test-method">
+                <span class="method-name">verify_checkBox</span>
+                <span class="method-start">13319 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verify_moveElement</span>
+                <span class="method-start">14024 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">14059 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

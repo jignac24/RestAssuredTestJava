@@ -1,33 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-15T04:01:06 IST" name="AutomationTestscripts" finished-at="2024-07-15T04:01:10 IST" duration-ms="4723">
+  <suite started-at="2024-07-15T19:07:30 IST" name="AutomationTestscripts" finished-at="2024-07-15T19:07:45 IST" duration-ms="15035">
     <groups>
     </groups>
-    <test started-at="2024-07-15T04:01:06 IST" name="PracticeTests" finished-at="2024-07-15T04:01:10 IST" duration-ms="4723">
+    <test started-at="2024-07-15T19:07:30 IST" name="ChromeTest" finished-at="2024-07-15T19:07:37 IST" duration-ms="6776">
       <class name="testcases.PracticeTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testcases.PracticeTest@5d2a4eed]" started-at="2024-07-15T04:01:06 IST" name="beforeTest" finished-at="2024-07-15T04:01:09 IST" duration-ms="3604" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:testcases.PracticeTest@5f8edcc5]" started-at="2024-07-15T19:07:30 IST" name="beforeTest" finished-at="2024-07-15T19:07:35 IST" duration-ms="4823" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="verifyTitle()[pri:0, instance:testcases.PracticeTest@5d2a4eed]" started-at="2024-07-15T04:01:09 IST" name="verifyTitle" finished-at="2024-07-15T04:01:09 IST" duration-ms="161" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitle -->
-        <test-method signature="verify_checkBox()[pri:0, instance:testcases.PracticeTest@5d2a4eed]" started-at="2024-07-15T04:01:09 IST" name="verify_checkBox" finished-at="2024-07-15T04:01:10 IST" duration-ms="362" status="PASS">
+        <test-method signature="verify_checkBox()[pri:0, instance:testcases.PracticeTest@5f8edcc5]" started-at="2024-07-15T19:07:35 IST" name="verify_checkBox" finished-at="2024-07-15T19:07:35 IST" duration-ms="257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_checkBox -->
-        <test-method signature="verify_popUp()[pri:0, instance:testcases.PracticeTest@5d2a4eed]" started-at="2024-07-15T04:01:10 IST" name="verify_popUp" finished-at="2024-07-15T04:01:10 IST" duration-ms="356" status="PASS">
+        <test-method signature="verify_moveElement()[pri:0, instance:testcases.PracticeTest@5f8edcc5]" started-at="2024-07-15T19:07:35 IST" name="verify_moveElement" finished-at="2024-07-15T19:07:37 IST" duration-ms="1473" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_popUp -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:testcases.PracticeTest@5d2a4eed]" started-at="2024-07-15T04:01:10 IST" name="afterTest" finished-at="2024-07-15T04:01:10 IST" duration-ms="194" status="PASS">
+        </test-method> <!-- verify_moveElement -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testcases.PracticeTest@5f8edcc5]" started-at="2024-07-15T19:07:37 IST" name="afterTest" finished-at="2024-07-15T19:07:37 IST" duration-ms="183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- testcases.PracticeTest -->
-    </test> <!-- PracticeTests -->
+    </test> <!-- ChromeTest -->
+    <test started-at="2024-07-15T19:07:30 IST" name="FirefoxTest" finished-at="2024-07-15T19:07:45 IST" duration-ms="15035">
+      <class name="testcases.PracticeTest">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:testcases.PracticeTest@55f616cf]" started-at="2024-07-15T19:07:30 IST" name="beforeTest" finished-at="2024-07-15T19:07:44 IST" duration-ms="13318" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verify_checkBox()[pri:0, instance:testcases.PracticeTest@55f616cf]" started-at="2024-07-15T19:07:44 IST" name="verify_checkBox" finished-at="2024-07-15T19:07:44 IST" duration-ms="703" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_checkBox -->
+        <test-method signature="verify_moveElement()[pri:0, instance:testcases.PracticeTest@55f616cf]" started-at="2024-07-15T19:07:44 IST" name="verify_moveElement" finished-at="2024-07-15T19:07:44 IST" duration-ms="32" status="FAIL">
+          <exception class="org.openqa.selenium.interactions.MoveTargetOutOfBoundsException">
+            <message>
+              <![CDATA[Move target (80, 1038) is out of bounds of viewport dimensions (1536, 731)
+Build info: version: '4.22.0', revision: 'c5f3146703'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [225db665-9ba0-4865-bf51-fa363045f59f, actions {actions=[org.openqa.selenium.interactions.Sequence@39703e9c]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.0, moz:accessibilityChecks: false, moz:buildID: 20240704121409, moz:debuggerAddress: 127.0.0.1:32412, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 16572, moz:profile: C:\Users\ADMIN\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:32412/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 225db665-9ba0-4865-bf51-fa363045f59f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: Move target (80, 1038) is out of bounds of viewport dimensions (1536, 731)
+Build info: version: '4.22.0', revision: 'c5f3146703'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [225db665-9ba0-4865-bf51-fa363045f59f, actions {actions=[org.openqa.selenium.interactions.Sequence@39703e9c]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.0, moz:accessibilityChecks: false, moz:buildID: 20240704121409, moz:debuggerAddress: 127.0.0.1:32412, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 16572, moz:profile: C:\Users\ADMIN\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:32412/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 225db665-9ba0-4865-bf51-fa363045f59f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:604)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:603)
+at org.openqa.selenium.interactions.Actions.perform(Actions.java:568)
+at testcases.PracticeTest.verify_moveElement(PracticeTest.java:183)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.interactions.MoveTargetOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_moveElement -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testcases.PracticeTest@55f616cf]" started-at="2024-07-15T19:07:44 IST" name="afterTest" finished-at="2024-07-15T19:07:45 IST" duration-ms="968" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- testcases.PracticeTest -->
+    </test> <!-- FirefoxTest -->
   </suite> <!-- AutomationTestscripts -->
 </testng-results>

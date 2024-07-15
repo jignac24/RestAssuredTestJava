@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="AutomationTestscripts">
-	<test name="PracticeTests">
+<suite name="AutomationTestscripts" parallel="tests">
+	<test name="ChromeTest">
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="testcases.PracticeTest">
 				<methods>
 				
-<!--					<include name="verifyTitle"></include>-->
-<!--					<include name="verify_popUp"></include>-->
+					<include name="verifyTitle"></include>
+					<include name="verify_checkBox"></include>
+					<include name="verify_moveElement"></include>
+				
+				</methods>
+			
+			</class>
+		
+		</classes>
+	
+	</test>
+		<test name="FirefoxTest">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="testcases.PracticeTest">
+				<methods>
+				
+					<include name="verifyTitle"></include>
+					<include name="verify_checkBox"></include>
+					<include name="verify_moveElement"></include>
 				
 				</methods>
 			
