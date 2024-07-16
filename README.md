@@ -1,2 +1,1 @@
-# RestAssuredTestJava
-RestAssured API testing with Java
+Restful API and UI Automation scripts using Selenium and JAVA + testNG
